@@ -4,6 +4,8 @@ import bikerental.model.enums.City;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+import java.util.List;
+
 @Getter
 @AllArgsConstructor
 
@@ -12,7 +14,8 @@ public class Station {
     private final long id;
     private final String address;
     private final City city;
-    private final int[] bikes;
-
+    //TODO::  Wymyśleć rozwiązanie limit miejsc;
+//    private final int[] bikes;
+    private List<Integer> bikes;
 
 }
