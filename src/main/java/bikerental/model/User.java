@@ -12,7 +12,7 @@ public class User {
 
     private final long id;
     private final String userName;
-    private final String Name;
+    private  String Name;
     private final String email;
     private final LocalDate registrationDate;
 

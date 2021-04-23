@@ -1,5 +1,6 @@
 package bikerental.model;
 
+import bikerental.model.enums.City;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
@@ -8,8 +9,9 @@ import lombok.Getter;
 
 public class Station {
 
-    long id;
-    private final String adress;
+    private final long id;
+    private final String address;
+    private final City city;
     private final int[] bikes;
 
 
