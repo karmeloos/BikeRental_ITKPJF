@@ -1,5 +1,8 @@
 package bikerental;
 
-public class Main {
+import bikerental.model.User;
 
+public class Main {
+    public static void main(String[] args) {
+    }
 }
