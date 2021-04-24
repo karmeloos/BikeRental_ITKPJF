@@ -7,5 +7,5 @@ public interface IRentals {
 
     boolean rent(Rental rental);
 
-    Rental giveBack(User user);
+    Rental findActive(User user);
 }

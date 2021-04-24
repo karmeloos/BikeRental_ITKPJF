@@ -20,8 +20,7 @@ public class Stations implements IStations {
     @Override
     public boolean lockout(long bikeId) {
         Station bikeInStation = findBikeInStation(bikeId);
-        bikeInStation.getBikes().remove(bikeId);
-        return bikeInStation.getBikes().contains(bikeId);
+        return bikeInStation.getBikes().remove(bikeId);
     }
 
 }

@@ -16,6 +16,12 @@ public class Station {
     private final City city;
     //TODO::  Wymyśleć rozwiązanie limit miejsc;
 //    private final int[] bikes;
-    private List<Integer> bikes;
+    private List<Long> bikes;
 
+
+    public boolean lockIn(long bikeId) {
+        // TODO: Zrobić limit
+        bikes.add(bikeId);
+        return bikes.contains(bikeId);
+    }
 }

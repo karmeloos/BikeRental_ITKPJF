@@ -22,16 +22,17 @@ public class UserController implements IUserController {
     @Override
     public boolean rent(User user, Bike bike) {
         long id = bike.getId();
-        if(!stations.lockout(id)){
-            return false;
+        if(stations.lockout(id)){
+            return rentals.rent(new Rental(bike, user));
         }
-        return rentals.rent(new Rental(bike, user));
+        return false;
     }
 
     @Override
     public BigDecimal giveBack(User user, Station station) {
         //TODO :: dodawanie usuwanie bike ze station
-        Rental rental = rentals.giveBack(user);
+ //       user
+        Rental rental = rentals.findActive(user);
         return rental.getCost();
     }
 

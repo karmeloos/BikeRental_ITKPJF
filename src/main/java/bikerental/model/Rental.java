@@ -22,8 +22,13 @@ public class Rental {
         start = LocalDateTime.now();
     }
 
+
     public BigDecimal getCost(){
+        giveBack();
         Duration time = Duration.between(start, end);
         return BigDecimal.valueOf(time.getSeconds() * 6.66);
     }
+     private void giveBack() {
+        end = LocalDateTime.now();
+     }
 }
